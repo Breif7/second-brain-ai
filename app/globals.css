@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #120f16;
+  color: #ece8f2;
+}
+
+.card {
+  @apply bg-panel border border-border rounded-xl p-4;
+}
+
+.input {
+  @apply w-full bg-bg border border-border rounded-lg px-3 py-2 text-sm;
+}
+
+.ProseMirror {
+  outline: none;
+  min-height: 60vh;
+}
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: #6b6477;
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+.ProseMirror ul[data-type="taskList"] {
+  list-style: none;
+  padding-left: 0;
+}
+.ProseMirror ul[data-type="taskList"] li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
